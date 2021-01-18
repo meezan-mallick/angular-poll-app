@@ -1,0 +1,25 @@
+<table>
+
+
+  <tbody>
+    <tr>
+      <td>Team A</td>
+      <td>Team B</td>
+    </tr>
+    <tr>
+      <td><div [ngStyle]="{'width': getTeamAScore()}" id="team-a"></div></td>
+      <td><div [ngStyle]="{'width': getTeamBScore()}" id="team-b"></div></td>
+    </tr>
+    <tr>
+      <td><button (click)="onTeamAClick()">Vote A</button></td>
+      <td><button (click)="onTeamBClick()">Vote B</button></td>
+    </tr>
+  </tbody>
+</table>
+
+<span>Total Votes team A : </span>{{ teamAPoints }} <br>
+<span>Total Votes team B : </span>{{ teamBPoints }}
+
+<hr>
+
+<button (click)="onResetClick()">Reset</button>
